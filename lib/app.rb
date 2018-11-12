@@ -17,7 +17,13 @@ get '/victoria_secret' do
   "Ciao Luca Francesco Eto!"
 end
 
-get '/cat' do
-  @nomenomen = ["My name is Cesare", "My surname is Camurani"].sample
+get '/random-cat' do
+  @names = ["Cesare", "Luca", "Mirko", "Pablo"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @names = params[:name]
   erb(:index)
 end
