@@ -18,5 +18,6 @@ get '/victoria_secret' do
 end
 
 get '/cat' do
+  @nomenomen = ["My name is Cesare", "My surname is Camurani"].sample
   erb(:index)
 end
